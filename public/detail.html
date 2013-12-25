@@ -1,0 +1,16 @@
+
+<form name="myForm">
+  <div class="control-group" ng-class="{error: myForm.name.$invalid}">
+    <label>Name</label>
+    <input type="text" name="name" ng-model="project.name" required>
+    <span ng-show="myForm.name.$error.required" class="help-inline">
+        Required</span>
+  </div>
+ 
+  <br>
+  <a href="#/" class="btn">Cancel</a>
+  <button ng-click="update(project)" ng-disabled="myForm.$invalid"
+          class="btn btn-primary">Save</button>
+  <button ng-click="destroy()"
+          ng-show="project.$remove" class="btn btn-danger">Delete</button>
+</form>

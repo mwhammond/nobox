@@ -1,0 +1,67 @@
+<h1>{{project.name}} <a href="#/projects/edit/{{project.id}}"><i class="fa fa-cog"></i></a></h1> 
+
+<button ng-click="destroy()">Remove project </button>
+
+<button ng-click="save()">Change name </button>
+
+<a href="#" editable-text="user.name">{{ user.name || "empty" }}</a>
+
+              <br>
+
+              <div class="row">
+                  <div class="col-lg-3">
+
+
+
+                             <!--widget start-->
+                              <div class=" state-overview">
+                                  <section class="panel">
+                                      <div class="symbol green">
+                                          <i class="fa fa-check-square-o"></i>
+                                      </div>
+                                      <div class="value">
+                                          <h1>5</h1>
+                                          <p>Tasks</p>
+                                      </div>
+                                  </section>
+                              </div>
+                              <!--widget end-->
+
+</div>
+ <div class="col-lg-3">
+                                                            <!--widget start-->
+                              <div class=" state-overview">
+                                  <section class="panel">
+                                      <div class="symbol red">
+                                          <i class="fa fa-users"></i>
+                                      </div>
+                                      <div class="value">
+                                          <h1>5</h1>
+                                          <p>Messages</p>
+                                      </div>
+                                  </section>
+                              </div>
+                              <!--widget end-->
+
+
+</div>
+ <div class="col-lg-3">
+
+                                                            <!--widget start-->
+                              <div class=" state-overview">
+                                  <section class="panel">
+                                      <div class="symbol default">
+                                          <i class="fa fa-list"></i>
+                                      </div>
+                                      <div class="value">
+                                          <h1>4</h1>
+                                          <p>Updates</p>
+                                      </div>
+                                  </section>
+                              </div>
+                       
+                              <!--widget end-->
+</div>
+
+      </div>
+  </div>

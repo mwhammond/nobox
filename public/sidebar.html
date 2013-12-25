@@ -1,0 +1,61 @@
+ <aside>
+
+          <div id="sidebar"  class="nav-collapse " ng-controller="ListCtrl">
+              <!-- sidebar menu start-->
+
+              <ul class="sidebar-menu" id="nav-accordion">
+
+
+          <a class="btn btn-composebig" data-toggle="modal" href="#myModal">
+          Compose
+          </a>
+          <li><p><a href="#/projects/new"><i class="fa fa-plus"> New project</i></a></p></li>
+
+                  <li class="menu" ng-repeat="project in projects | filter:search | orderBy:'name'">
+                      <a href="#/projects/{{project.id}}">
+                          <span>{{project.name}}</span>
+                          <span class="label label-default pull-right mail-info">4</span>
+                          <span class="label label-danger pull-right mail-info">5</span>
+                          <span class="label label-success pull-right mail-info">10</span>
+                      </a>
+                  </li>
+
+
+                   <li class="divider"></li>
+                
+                  <li>
+                      <a  onclick="mailtemplate()" href="javascript:void(0);">
+                          <i class="fa fa-envelope"></i>
+                          <span>Raw mail</span>
+                          <span class="label label-info pull-right mail-info">126</span>
+                      </a>
+                  </li>
+
+
+                  <li>
+                      <a  href="inbox.html">
+                          <i class="fa fa-envelope"></i>
+                          <span>Newsletters </span>
+                          <span class="label label-default pull-right mail-info">23</span>
+                      </a>
+                  </li>
+
+                   <li>
+                      <a  href="inbox.html">
+                          <i class="fa fa-envelope"></i>
+                          <span>Junk </span>
+                          <span class="label label-default pull-right mail-info">152</span>
+                      </a>
+                  </li>
+
+
+
+
+
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      <!--main content start-->

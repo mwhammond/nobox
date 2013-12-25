@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AngularRails">
+  <head>
+    <meta charset="utf-8">
+    <meta name="NOBOX" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="nobox">
+    <meta name="keyword" content="email, email client, project management">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>NOBOX</title>
+
+    <!-- Bootstrap core CSS -->
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+
+  <body>
+
+  <section id="container" class="">
+      <!--header start-->
+      <header class="header white-bg">
+        <!--
+          <div class="sidebar-toggle-box">
+              <div data-original-title="Toggle Navigation" data-placement="right" class="fa fa-bars tooltips"></div>
+          </div>
+-->
+
+          <!--logo start-->
+          <a href="index.html" class="logo" >NOBOX</a>
+          <!--logo end-->
+          <div class="nav notify-row" id="top_menu">
+            <!--  notification start -->
+            <ul class="nav top-menu">
+              <!-- settings start -->
+
+
+          </ul>
+          </div>
+          <div class="top-nav ">
+              <ul class="nav pull-right top-menu">
+                  <li>
+                      <input type="text" class="form-control search" placeholder="Search">
+                  </li>
+                  <!-- user login dropdown start-->
+                  <li class="dropdown">
+                      <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                          <img alt="" src="img/avatar1_small.jpg">
+                          <span class="username">Mark Hammond</span>
+                          <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu extended logout">
+                          <div class="log-arrow-up"></div>
+                          <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                          <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                          <li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li>
+                          <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                      </ul>
+                  </li>
+                  <!-- user login dropdown end -->
+              </ul>
+          </div>
+      </header>
+      <!--header end-->
+      <!--sidebar start-->
+      <aside>
+
+
+
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+
+
+
+              <ul class="sidebar-menu" id="nav-accordion">
+
+
+          <a class="btn btn-composebig" data-toggle="modal" href="#myModal">
+          Compose
+          </a>
+          <li><%= link_to "All Projects", "/#project"  %></li>
+          <li><%= link_to "New Project", "/#project/add"  %></li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;">
+                          <span>T-index deal</span>
+                          <span class="label label-default pull-right mail-info">4</span>
+                          <span class="label label-danger pull-right mail-info">5</span>
+                          <span class="label label-success pull-right mail-info">10</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="grids.html">Assesment</a></li>
+                          <li><a  href="calendar.html">Management team</a></li>
+                          <li><a  href="gallery.html">Invest</a></li>
+                      </ul>
+                  </li>
+
+
+                  <li class="sub-menu">
+                      <a href="javascript:;">
+                          <span>ICSaaS event</span>
+                          <span class="label label-default pull-right mail-info">4</span>
+                          <span class="label label-danger pull-right mail-info">5</span>
+                          <span class="label label-success pull-right mail-info">10</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="grids.html">Assesment</a></li>
+                          <li><a  href="calendar.html">Management team</a></li>
+                          <li><a  href="gallery.html">Invest</a></li>
+                      </ul>
+                  </li>
+
+
+                  <li class="sub-menu">
+                      <a href="javascript:;">
+                          <span>Task Team</span>
+                          <span class="label label-default pull-right mail-info">2</span>
+                          <span class="label label-danger pull-right mail-info">3</span>
+                          <span class="label label-success pull-right mail-info">12</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="grids.html">Assesment</a></li>
+                          <li><a  href="calendar.html">Management team</a></li>
+                          <li><a  href="gallery.html">Invest</a></li>
+                      </ul>
+                  </li>
+
+
+                   <li class="sub-menu">
+                      <a href="javascript:;">
+                          <span>Brain project</span>
+                          <span class="label label-default pull-right mail-info">0</span>
+                          <span class="label label-danger pull-right mail-info">1</span>
+                          <span class="label label-success pull-right mail-info">59</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="grids.html">Assesment</a></li>
+                          <li><a  href="calendar.html">Management team</a></li>
+                          <li><a  href="gallery.html">Invest</a></li>
+                      </ul>
+                  </li>
+
+                   <li class="divider"></li>
+                
+                  <li>
+                      <a  onclick="mailtemplate()" href="javascript:void(0);">
+                          <i class="fa fa-envelope"></i>
+                          <span>Raw mail</span>
+                          <span class="label label-info pull-right mail-info">126</span>
+                      </a>
+                  </li>
+
+
+                  <li>
+                      <a  href="inbox.html">
+                          <i class="fa fa-envelope"></i>
+                          <span>Newsletters </span>
+                          <span class="label label-default pull-right mail-info">23</span>
+                      </a>
+                  </li>
+
+                   <li>
+                      <a  href="inbox.html">
+                          <i class="fa fa-envelope"></i>
+                          <span>Junk </span>
+                          <span class="label label-default pull-right mail-info">152</span>
+                      </a>
+                  </li>
+
+
+          <%= bootstrap_flash %>
+          <div ng-view></div>
+
+
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      <!--main content start-->
+      <section id="main-content">
+         
+   
+
+ 
+          <section class="wrapper">
+              <!-- page start-->
+
+           
+
+          </section>
+      </div>
+  </div>
+
+</template>
+
+    <%= javascript_include_tag "application" %>
+
+  </body>
+</html>

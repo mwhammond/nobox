@@ -1,0 +1,18 @@
+<input type="text" ng-model="search" class="search-query" placeholder="Search">
+<table>
+  <thead>
+  <tr>
+    <th>Project</th>
+    <th>Description</th>
+    <th><a href="#/projects/new"><i class="fa fa-plus"></i></a></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="project in projects | filter:search | orderBy:'name'">
+    <td><a href="#/projects/{{project.id}}">{{project.name}}</a></td>
+    <td>
+      <button ng-click="destroy()">remove</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
