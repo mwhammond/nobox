@@ -10,9 +10,6 @@
   <tbody>
   <tr ng-repeat="project in projects | filter:search | orderBy:'name'">
     <td><a href="#/projects/{{project.id}}">{{project.name}}</a></td>
-    <td>
-      <button ng-click="destroy()">remove</button>
-    </td>
   </tr>
   </tbody>
 </table>

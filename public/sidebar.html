@@ -9,7 +9,6 @@
           <a class="btn btn-composebig" data-toggle="modal" href="#myModal">
           Compose
           </a>
-          <li><p><a href="#/projects/new"><i class="fa fa-plus"> New project</i></a></p></li>
 
                   <li class="menu" ng-repeat="project in projects | filter:search | orderBy:'name'">
                       <a href="#/projects/{{project.id}}">

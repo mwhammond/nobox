@@ -41,6 +41,9 @@ nobox.factory('Projects', ['$resource', function($resource) {
     	);
 }]);
 
+
+
+
 /*
 app.factory('Comment', ['$resource', function($resource) {
     return $resource('/forums/:forumId/comments/:id', {forumId: '@forumId', id: '@id'});

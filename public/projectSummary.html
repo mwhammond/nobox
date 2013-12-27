@@ -1,10 +1,16 @@
-<h1>{{project.name}} <a href="#/projects/edit/{{project.id}}"><i class="fa fa-cog"></i></a></h1> 
 
-<button ng-click="destroy()">Remove project </button>
 
-<button ng-click="save()">Change name </button>
+              <div class="row">
+                  <div class="col-lg-10">
+                     <h1><a href="#" editable-text="project.name" onbeforesave="save()">{{ project.name || "click to edit" }}</a></h1>
+                  </div>
 
-<a href="#" editable-text="user.name">{{ user.name || "empty" }}</a>
+                  <div class="col-lg-1">
+                     <h3><a href="/" ng-click="destroy()"><i class="fa fa-trash-o"></i></a><h3>
+ 
+                  </div>
+                </div>
+
 
               <br>
 
@@ -14,7 +20,7 @@
 
 
                              <!--widget start-->
-                              <div class=" state-overview">
+                              <div class=" state-overview" ng-click="tasks()" onmouseover="" style="cursor: pointer;">
                                   <section class="panel">
                                       <div class="symbol green">
                                           <i class="fa fa-check-square-o"></i>
@@ -30,7 +36,7 @@
 </div>
  <div class="col-lg-3">
                                                             <!--widget start-->
-                              <div class=" state-overview">
+                              <div class=" state-overview" ng-click="messages()" onmouseover="" style="cursor: pointer;">
                                   <section class="panel">
                                       <div class="symbol red">
                                           <i class="fa fa-users"></i>
@@ -48,7 +54,7 @@
  <div class="col-lg-3">
 
                                                             <!--widget start-->
-                              <div class=" state-overview">
+                              <div class=" state-overview" ng-click="updates()" onmouseover="" style="cursor: pointer;">
                                   <section class="panel">
                                       <div class="symbol default">
                                           <i class="fa fa-list"></i>
@@ -65,3 +71,40 @@
 
       </div>
   </div>
+
+<!-- TASK / MESSAGES -->
+
+<!-- HOW TO ADD MULTIPLE PANELS SELECTIVELY - NOT USING FOR NOW ->
+
+</div>
+
+      <div class="col-lg-9" ng-show="taskOn">
+        <span class="icon-thumbs-up"></span> Tasks are on!
+      </div>
+
+      <div class="col-lg-9" ng-show="messageOn">
+        <span class="icon-thumbs-up"></span> Messages are on!
+      </div>
+
+      <div class="col-lg-9" ng-show="updateOn">
+        <span class="icon-thumbs-up"></span> Updates are on!
+      </div>
+
+    </div>
+
+-->
+
+
+<div class="row">
+
+ <div class="col-lg-9">
+
+
+  <div class="slide-animate-container">
+        <div class="slide-animate" ng-include="view"></div>
+  </div>
+
+</div>
+
+</div>
+

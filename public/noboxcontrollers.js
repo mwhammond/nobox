@@ -1,14 +1,15 @@
 
-var nobox = angular.module('nobox');
+//var nobox = angular.module('nobox');
 
-nobox.controller('ListCtrl', ['$scope', 'Projects', function($scope, Projects) {
+App.controller('ListCtrl', ['$scope', 'Projects', function($scope, Projects) {
     //Grab all forums from the server
     $scope.projects = Projects.query();
+    //$scope.projects = Data;
 
 
 }]);
 
-nobox.controller('CreateCtrl', ['$scope', '$location', 'Projects', function($scope, $location, Projects) {
+App.controller('CreateCtrl', ['$scope', '$location', 'Projects', function($scope, $location, Projects) {
     //The save method which is called when the user wants to submit their data
     $scope.save = function() {
 
@@ -29,53 +30,41 @@ nobox.controller('CreateCtrl', ['$scope', '$location', 'Projects', function($sco
     }
 }]);
 
-/*
-nobox.controller('EditCtrl', ['$scope', '$location', 'Projects', '$routeParams', function($scope, $location, $routeParams, Projects) {
-    //The save method which is called when the user wants to submit their data
-   // $scope.project = Projects.get({'id': $routeParams.id});
-
-
-$scope.save = function() {
-  
-var project = Projects.get({id: 15});
-project.name="tesalate";
-project.$save();
-}
-
-/*
-  return Projects.save({}, {
-    project: {
-      name: $scope.project.name,
-    }
-  }, function(response) {
-    return $location.path("/projects");
-  }, function(response) {});
-};
-
-var todo2 = Todo.get({id: 123});
-todo2.foo += '!';
-todo2.$save();
-
-
-}]);
-
-*/
-
-
-
-
 
 
 //A controller to show the forum and all it's glory
-nobox.controller('ShowCtrl', ['$scope', 'Projects', '$routeParams', function($scope, Projects, $routeParams) {
+App.controller('ShowCtrl', ['$scope', 'Projects', '$routeParams', function($scope, Projects, $routeParams) {
     //Grab the forum from the server 
     $scope.project = Projects.get({'id': $routeParams.id});
 
-$scope.save = function() {
-  
-$scope.project.name="tesalate";
+    $scope.view = "tasks.html"
+
+
+$scope.save = function() { 
+
 $scope.project.$update();
 }
+
+// PAGE SWITCH
+
+$scope.tasks = function(view) {
+
+  $scope.view = "tasks.html"
+
+}
+
+$scope.messages = function(view) {
+
+  $scope.view = "messages.html"
+}
+
+$scope.updates = function(view) {
+
+  $scope.view = "updates.html"
+
+}
+
+
 
 
     //Destroy method for deleting a forum
@@ -85,58 +74,12 @@ $scope.project.$update();
         Projects.remove({id: $scope.project.id}, function() {
             //If successful, remove it from our collection
            // $scope.projects.splice(index, 1);
-           $location.path( '/' );
+        
+    
+         //  $location.path( '/' );
         });
     }
 
 }]);
 
 
-
-
-
-/*
-function ListCtrl($scope, Projects, $location, $routeParams) {
-    "use strict";
-    $scope.projects = Projects.query({id: 11});
-};
-
-
-
-
-
-/*
-
-function ShowCtrl($scope, $location, $routeParams, Project) {
-  "use strict";
-    $scope.project = Project.show({
-      project_id : $routeParams.projectId
-})
-};
-
-
-function EditCtrl($scope, $routeParams, $location, Project) {
-    "use strict";
-    
-    $scope.master = {};
-    var project_id = $routeParams.projectId;
-    $scope.project = Project.show({
-        project_id : project_id
-    }, function(resource) {
-        $scope.master = angular.copy(resource);
-    });
-
-    $scope.update = function(project) {
-        project.$update({
-            project_id : project_id
-        }, function(updatedProject) {
-            $location.path('/projects/' + updatedProject.id);
-        });
-    }
-}
-
-*/
-
-
-
-    

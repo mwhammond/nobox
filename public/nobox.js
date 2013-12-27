@@ -1,4 +1,4 @@
-angular.module('nobox', ['ngRoute', 'ngResource', 'xeditable'])
+var App = angular.module('nobox', ['ngRoute', 'ngResource', 'xeditable'])
 
   .config(['$httpProvider', function(provider){
     provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
@@ -8,7 +8,7 @@ angular.module('nobox', ['ngRoute', 'ngResource', 'xeditable'])
   $routeProvider
     .when('/', {
       controller:'ListCtrl',
-      templateUrl:'list.html'
+      templateUrl:'dashboard.html'
     })
     .when('/projects/edit/:id', {
       controller:'EditCtrl',
@@ -27,11 +27,13 @@ angular.module('nobox', ['ngRoute', 'ngResource', 'xeditable'])
     });
 });
 
-nobox.run(function(editableOptions) {
+App.run(function(editableOptions) {
   editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
 });
 
-
+App.run(function(editableOptions) {
+  editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+});
 
 
 
