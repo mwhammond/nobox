@@ -1,8 +1,7 @@
 
-
               <div class="row">
                   <div class="col-lg-10">
-                     <h1><a href="#" editable-text="project.name" onbeforesave="save()">{{ project.name || "click to edit" }}</a></h1>
+                     <h1><a href="#" editable-text="project.name" onaftersave="update()">{{ project.name || "add project name" }}</a></h1>
                   </div>
 
                   <div class="col-lg-1">
@@ -10,6 +9,10 @@
  
                   </div>
                 </div>
+
+
+
+
 
 
               <br>
@@ -26,7 +29,7 @@
                                           <i class="fa fa-check-square-o"></i>
                                       </div>
                                       <div class="value">
-                                          <h1>5</h1>
+                                          <h1>0</h1>
                                           <p>Tasks</p>
                                       </div>
                                   </section>
@@ -42,7 +45,7 @@
                                           <i class="fa fa-users"></i>
                                       </div>
                                       <div class="value">
-                                          <h1>5</h1>
+                                          <h1>0</h1>
                                           <p>Messages</p>
                                       </div>
                                   </section>
@@ -60,7 +63,7 @@
                                           <i class="fa fa-list"></i>
                                       </div>
                                       <div class="value">
-                                          <h1>4</h1>
+                                          <h1>0</h1>
                                           <p>Updates</p>
                                       </div>
                                   </section>

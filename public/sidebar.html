@@ -1,6 +1,6 @@
  <aside>
 
-          <div id="sidebar"  class="nav-collapse " ng-controller="ListCtrl">
+          <div id="sidebar"  class="nav-collapse " ng-controller="ProjectController">
               <!-- sidebar menu start-->
 
               <ul class="sidebar-menu" id="nav-accordion">
@@ -13,9 +13,9 @@
                   <li class="menu" ng-repeat="project in projects | filter:search | orderBy:'name'">
                       <a href="#/projects/{{project.id}}">
                           <span>{{project.name}}</span>
-                          <span class="label label-default pull-right mail-info">4</span>
-                          <span class="label label-danger pull-right mail-info">5</span>
-                          <span class="label label-success pull-right mail-info">10</span>
+                          <span class="label label-default pull-right mail-info">0</span>
+                          <span class="label label-danger pull-right mail-info">0</span>
+                          <span class="label label-success pull-right mail-info">0</span>
                       </a>
                   </li>
 

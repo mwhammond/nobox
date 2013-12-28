@@ -7,19 +7,15 @@ var App = angular.module('nobox', ['ngRoute', 'ngResource', 'xeditable'])
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      controller:'ListCtrl',
+      controller:'ProjectController',
       templateUrl:'dashboard.html'
     })
-    .when('/projects/edit/:id', {
-      controller:'EditCtrl',
-      templateUrl:'newproject.html'
-    })
     .when('/projects/new', {
-      controller:'CreateCtrl',
-      templateUrl:'newproject.html'
+      controller:'ProjectController',
+      templateUrl:'projectSummary.html'
     })
-    .when('/projects/:id', {
-      controller:'ShowCtrl',
+    .when('/projects/:Id', {
+      controller:'ProjectController',
       templateUrl:'projectSummary.html'
     })
     .otherwise({

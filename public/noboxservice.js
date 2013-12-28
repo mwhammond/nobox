@@ -34,12 +34,35 @@ angular.module('apiService', ['ngResource'])
 
 'use strict';
 
-var nobox = angular.module('nobox');
-nobox.factory('Projects', ['$resource', function($resource) {
+//var App = angular.module('nobox');
+
+App.factory('Projects', ['$resource', function($resource) {
+
     return $resource('/projects/:id', {id: '@id'},
     	{ update: {method:'PUT', params: {id: '@id'}}}
     	);
+
 }]);
+
+
+App.filter('getById', function() {
+  return function(input, id) {
+    var i=0, len=input.length;
+    for (; i<len; i++) {
+      if (+input[i].id == +id) {
+        return input[i];
+      }
+    }
+    return null;
+  }
+})
+
+
+
+
+
+// TO KEEP BINDING BETWEEN CONTROLLERS
+
 
 
 
