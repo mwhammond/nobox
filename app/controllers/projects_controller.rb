@@ -44,7 +44,7 @@ class ProjectsController < ApplicationController
       if @project.update_attributes(project_params)
         head :no_content
       else
-        render json: @club.errors, status: :unprocessable_entity
+        render json: @project.errors, status: :unprocessable_entity
       end
   end
 
@@ -68,7 +68,7 @@ class ProjectsController < ApplicationController
   end
 
 
-  
+
 
   def set_csrf_cookie_for_ng
     cookies['XSRF-TOKEN'] = form_authenticity_token if protect_against_forgery?

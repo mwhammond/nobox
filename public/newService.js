@@ -13,13 +13,20 @@ App.factory('ProjectItems', function($resource) {
 
 
 
-function findById(source, id) {
-return source.filter(function( obj ) {
-    // coerce both obj.id and id to numbers 
-    // for val & type comparison
-    return +obj.id === +id;
-})[ 0 ];
-}
+App.factory('MessageItems', function($resource) {
+    return $resource(
+        '/messages/:id',  // URL template
+        {id: '@id'},                    // default values
+        {
+            create: {method: 'POST'},
+            update: {method:'PUT', params: {id: '@id'}}
+        }
+    );
+});
+
+
+// PAGE SWITCH
+
 
 
 //{ 'get':    {method:'GET'},

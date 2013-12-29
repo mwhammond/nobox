@@ -38,14 +38,16 @@
 
 </div>
  <div class="col-lg-3">
+
+
                                                             <!--widget start-->
-                              <div class=" state-overview" ng-click="messages()" onmouseover="" style="cursor: pointer;">
+                              <div ng-controller="MessageController" class=" state-overview" ng-click="allMessages()" onmouseover="" style="cursor: pointer;">
                                   <section class="panel">
                                       <div class="symbol red">
                                           <i class="fa fa-users"></i>
                                       </div>
                                       <div class="value">
-                                          <h1>0</h1>
+                                          <h1>{{messages.length}}</h1>
                                           <p>Messages</p>
                                       </div>
                                   </section>

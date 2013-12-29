@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131218160054) do
+ActiveRecord::Schema.define(version: 20131228235021) do
+
+  create_table "messages", force: true do |t|
+    t.string   "from"
+    t.string   "to"
+    t.string   "cc"
+    t.text     "content"
+    t.datetime "timestap"
+    t.integer  "projectId"
+    t.boolean  "archive"
+    t.boolean  "read"
+    t.integer  "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "projects", force: true do |t|
     t.string   "name"

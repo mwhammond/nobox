@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from: MyString
+  to: MyString
+  cc: MyString
+  content: MyString
+  timestap: 2013-12-28 23:50:21
+  projectId: 
+  archive: false
+  read: false
+
+two:
+  from: MyString
+  to: MyString
+  cc: MyString
+  content: MyString
+  timestap: 2013-12-28 23:50:21
+  projectId: 
+  archive: false
+  read: false
