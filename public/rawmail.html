@@ -1,0 +1,125 @@
+
+
+              <!--mail inbox start-->
+              <div class="mail-box">
+
+                  <aside class="lg-side">
+
+                    <!--
+                      <div class="inbox-head">
+                          <h3>Inbox</h3>
+                          <form class="pull-right position" action="#">
+                              <div class="input-append">
+                                  <input type="text"  placeholder="Search Mail" class="sr-input">
+                                  <button type="button" class="btn sr-btn"><i class="fa fa-search"></i></button>
+                              </div>
+                          </form>
+                      </div>
+
+                    -->
+                      <div class="inbox-body">
+                         <div class="mail-option">
+                             <div class="chk-all">
+                                 <input type="checkbox" class="mail-checkbox mail-group-checkbox">
+                                 <div class="btn-group" >
+                                     <a class="btn mini all" href="#" data-toggle="dropdown">
+                                         All
+                                         <i class="fa fa-angle-down "></i>
+                                     </a>
+                                     <ul class="dropdown-menu">
+                                         <li><a href="#"> None</a></li>
+                                         <li><a href="#"> Read</a></li>
+                                         <li><a href="#"> Unread</a></li>
+                                     </ul>
+                                 </div>
+                             </div>
+
+                             <div class="btn-group">
+                                 <a class="btn mini tooltips" href="#" data-toggle="dropdown" data-placement="top" data-original-title="Refresh">
+                                     <i class=" fa fa-refresh"></i>
+                                 </a>
+                             </div>
+                             <div class="btn-group hidden-phone">
+                                 <a class="btn mini blue" href="#" data-toggle="dropdown">
+                                     More
+                                     <i class="fa fa-angle-down "></i>
+                                 </a>
+                                 <ul class="dropdown-menu">
+                                     <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
+                                     <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                                     <li class="divider"></li>
+                                     <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                                 </ul>
+                             </div>
+                             <div class="btn-group">
+                                 <a class="btn mini blue" href="#" data-toggle="dropdown">
+                                     Move to
+                                     <i class="fa fa-angle-down "></i>
+                                 </a>
+                                 <ul class="dropdown-menu">
+                                     <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
+                                     <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                                     <li class="divider"></li>
+                                     <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                                 </ul>
+                             </div>
+
+                             <ul class="unstyled inbox-pagination">
+                                 <li><span>1-50 of 234</span></li>
+                                 <li>
+                                     <a href="#" class="np-btn"><i class="fa fa-angle-left  pagination-left"></i></a>
+                                 </li>
+                                 <li>
+                                     <a href="#" class="np-btn"><i class="fa fa-angle-right pagination-right"></i></a>
+                                 </li>
+                             </ul>
+                         </div>
+                          <table class="table table-inbox table-hover">
+                            <tbody>
+
+
+
+                              <tr class="unread" ng-repeat="message in messages">
+                                  <td class="inbox-small-cells">
+                                      <input type="checkbox" class="mail-checkbox">
+                                  </td>
+                                  <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                  <td class="view-message  dont-show">{{message.from}}</td>
+
+                                  <td class="view-message ">{{message.title}}</td>
+                                  <td class="view-message"><select>
+                                      <option value="volvo">Action</option>
+                                      <option value="saab">T-index</option>
+                                      <option value="mercedes">Brain project</option>
+                                      <option value="mercedes">Junk</option>
+                                      <option value="mercedes">New project</option>
+
+                                  </select></td>
+
+                                  <td class="view-message"><select>
+                                      <option value="volvo">Update</option>
+                                      <option value="saab">T-index</option>
+                                      <option value="mercedes">Brain project</option>
+                                      <option value="mercedes">Junk</option>
+                                      <option value="mercedes">New project</option>
+
+                                  </select></td>
+
+                                  <td class="view-message  inbox-small-cells"><i class="fa fa-trash-o"></i></td>
+                                  <td class="view-message  inbox-small-cells"><i class="fa fa-paper-clip"></i></td>
+                                  <td class="view-message  text-right">2:58pm</td>
+                              </tr>
+
+
+                             
+
+                              </tr>
+                          </tbody>
+                          </table>
+                      </div>
+                  </aside>
+              </div>
+              <!--mail inbox end-->
+
+
+

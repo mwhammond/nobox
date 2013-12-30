@@ -18,6 +18,10 @@ var App = angular.module('nobox', ['ngRoute', 'ngResource', 'xeditable'])
       controller:'ProjectController',
       templateUrl:'projectSummary.html'
     })
+    .when('/mail/', {
+      controller:'MessageController',
+      templateUrl:'rawmail.html'
+    })
     .otherwise({
       redirectTo:'/'
     });
