@@ -3,26 +3,9 @@
 <div class="row">
 
 <h1>Dashboard</h1>
-
-  <div class="col-lg-3">
-
 <br>
-<br>
-<table>
-  <thead>
-  <tr>
-  </tr>
-  </thead>
-  <tbody>
 
-
-  	  <h4><a href="#/projects/new"><i class="fa fa-plus"> New project</i></a></h4>
-  <P>---------------</P>
-
-
-    <div class="input-group">
-      <input type="text" class="form-control" ng-model="search" placeholder="Search...">
-    </div><!-- /input-group -->
+  <!-- /input-group -->
 
 <!--
   <tr ng-repeat="project in projects | filter:search | orderBy:'name'">
@@ -37,6 +20,47 @@
 
 -->
 
-  </div><!-- /.col-lg-3 -->
+              <div class="row">
+                  <div class="col-lg-3">
+                    <h4><a href="#/projects/new"><i class="fa fa-plus"> New project</i></a></h4>  
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="input-group">
+                    <input type="text" class="form-control" ng-model="search" placeholder="Search...">
+                  </div>
+                  </div>
+                  <div class="col-lg-3">
+        
+                  </div>
+                </div>
+                <br>
+                <br>
+
+
+                <div class="row">
+           
+                      
+                    <div class=" project-summary" ng-repeat="project in projects | filter:search | orderBy:'name'">
+
+                     <!--widget start-->
+                      <aside class="profile-nav alt green-border" >
+                          <section class="panel">
+                              <div class="user-heading alt green-bg">
+                              <a href="#/projects/{{project.id}}">
+                                  <h1>{{project.name}}</h1>
+                                </a>
+                              </div>
+
+                              <ul class="nav nav-pills nav-stacked">
+                                  <li><a href="javascript:;"> <i class="fa fa-check-square"></i> Tasks<span class="label label-primary pull-right r-activity">19</span></a></li>
+                                  <li><a href="javascript:;"> <i class="fa fa-users"></i> Actionables <span class="label label-info pull-right r-activity">11</span></a></li>
+                                  <li><a href="javascript:;"> <i class="fa fa-list"></i> Updates <span class="label label-warning pull-right r-activity">03</span></a></li>
+                              </ul>
+
+                          </section>
+                      </div>
+                  </div>
+
+                      <!--widget end-->
 
 <div>

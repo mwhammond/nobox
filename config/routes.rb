@@ -1,5 +1,9 @@
 Nobox6::Application.routes.draw do
 
+  
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -13,8 +17,13 @@ Nobox6::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :tasks
   resources :projects
-  resources :messages
+  resources :emails do
+    member do
+      post :load
+    end
+  end
   # Sample resource route with options:
   #   resources :products do
   #     member do

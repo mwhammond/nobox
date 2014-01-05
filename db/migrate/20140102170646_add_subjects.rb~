@@ -1,0 +1,4 @@
+class AddSubjects < ActiveRecord::Migration
+  def change
+  end
+end

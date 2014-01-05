@@ -15,7 +15,19 @@ App.factory('ProjectItems', function($resource) {
 
 App.factory('MessageItems', function($resource) {
     return $resource(
-        '/messages/:id',  // URL template
+        '/emails/:id',  // URL template
+        {id: '@id'},                    // default values
+        {
+            create: {method: 'POST'},
+            load: {method: 'POST'},
+            update: {method:'PUT', params: {id: '@id'}}
+        }
+    );
+});
+
+App.factory('TaskItems', function($resource) {
+    return $resource(
+        '/tasks/:id',  // URL template
         {id: '@id'},                    // default values
         {
             create: {method: 'POST'},

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text: MyString
+  archive: false
+  due: 2014-01-05 22:13:44
+  projectId: 1
+  messages: MyString
+
+two:
+  text: MyString
+  archive: false
+  due: 2014-01-05 22:13:44
+  projectId: 1
+  messages: MyString

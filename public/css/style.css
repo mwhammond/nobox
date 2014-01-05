@@ -2301,21 +2301,30 @@ ul.inbox-pagination li {
 
 /*profile*/
 
+.project-summary {
+    width: 200px;
+    float: left;
+    margin: 20px;
+}
+
+
 .profile-nav .user-heading {
     background: #ff766c;
     color: #fff;
     border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
-    padding: 30px;
+    padding: 15px;
     text-align: center;
 }
 
+/*
 .profile-nav .user-heading.round a  {
     border-radius: 50%;
     -webkit-border-radius: 50%;
     border: 10px solid rgba(256,256,256,0.3);
     display: inline-block;
 }
+*/
 
 .profile-nav .user-heading a img {
     width: 112px;
@@ -3662,18 +3671,22 @@ table.sliders tr td {
 .user-heading.alt {
     display: inline-block;
     width: 100%;
-    text-align: left;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .alt.green-bg {
-    background: #aec785;
+    background: #7DBED4;
 }
 
 .profile-nav.alt.green-border ul > li > a:hover, .profile-nav.alt.green-border ul > li > a:focus, .profile-nav.alt.green-border ul li.active a {
     border-left: 5px solid #aec785;
 }
 
+
 .user-heading.alt a {
+    color: white
+    /*
     float: left;
     margin-right: 15px;
     margin-left: -10px;
@@ -3681,7 +3694,9 @@ table.sliders tr td {
     border: 5px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     -webkit-border-radius: 50%;
+    */
 }
+
 .user-heading.alt a img{
     width: 100px;
     height: 100px;

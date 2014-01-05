@@ -5,6 +5,7 @@
 
                   <aside class="lg-side">
 
+                    <button ng-click="sync()">Refresh</button>
                     <!--
                       <div class="inbox-head">
                           <h3>Inbox</h3>
@@ -86,7 +87,7 @@
                                   <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
                                   <td class="view-message  dont-show">{{message.from}}</td>
 
-                                  <td class="view-message ">{{message.title}}</td>
+                                  <td class="view-message ">{{message.subject}}</td>
                                   <td class="view-message"><select>
                                       <option value="volvo">Action</option>
                                       <option value="saab">T-index</option>
@@ -96,14 +97,6 @@
 
                                   </select></td>
 
-                                  <td class="view-message"><select>
-                                      <option value="volvo">Update</option>
-                                      <option value="saab">T-index</option>
-                                      <option value="mercedes">Brain project</option>
-                                      <option value="mercedes">Junk</option>
-                                      <option value="mercedes">New project</option>
-
-                                  </select></td>
 
                                   <td class="view-message  inbox-small-cells"><i class="fa fa-trash-o"></i></td>
                                   <td class="view-message  inbox-small-cells"><i class="fa fa-paper-clip"></i></td>

@@ -1,0 +1,47 @@
+<h1>Listing emails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Cc</th>
+      <th>Content</th>
+      <th>Timestamp</th>
+      <th>Projectid</th>
+      <th>Archive</th>
+      <th>Read</th>
+      <th>Type</th>
+      <th>Origid</th>
+      <th>Hash</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @emails.each do |email| %>
+      <tr>
+        <td><%= email.from %></td>
+        <td><%= email.to %></td>
+        <td><%= email.cc %></td>
+        <td><%= email.content %></td>
+        <td><%= email.timestamp %></td>
+        <td><%= email.projectId %></td>
+        <td><%= email.archive %></td>
+        <td><%= email.read %></td>
+        <td><%= email.type %></td>
+        <td><%= email.origId %></td>
+        <td><%= email.hash %></td>
+        <td><%= link_to 'Show', email %></td>
+        <td><%= link_to 'Edit', edit_email_path(email) %></td>
+        <td><%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Email', new_email_path %>

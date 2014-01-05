@@ -11,25 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131230145403) do
+ActiveRecord::Schema.define(version: 20140105221343) do
 
-  create_table "messages", force: true do |t|
+  create_table "emails", force: true do |t|
     t.string   "from"
     t.string   "to"
     t.string   "cc"
     t.text     "content"
-    t.datetime "timestap"
+    t.datetime "timestamp"
     t.integer  "projectId"
     t.boolean  "archive"
     t.boolean  "read"
     t.integer  "type"
+    t.integer  "origId"
+    t.string   "mail_hash"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title"
+    t.string   "subject"
   end
 
   create_table "projects", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks", force: true do |t|
+    t.string   "text"
+    t.boolean  "archive"
+    t.datetime "due"
+    t.integer  "projectId"
+    t.string   "messages"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

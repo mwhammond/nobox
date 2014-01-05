@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From:</strong>
+  <%= @email.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @email.to %>
+</p>
+
+<p>
+  <strong>Cc:</strong>
+  <%= @email.cc %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @email.content %>
+</p>
+
+<p>
+  <strong>Timestamp:</strong>
+  <%= @email.timestamp %>
+</p>
+
+<p>
+  <strong>Projectid:</strong>
+  <%= @email.projectId %>
+</p>
+
+<p>
+  <strong>Archive:</strong>
+  <%= @email.archive %>
+</p>
+
+<p>
+  <strong>Read:</strong>
+  <%= @email.read %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @email.type %>
+</p>
+
+<p>
+  <strong>Origid:</strong>
+  <%= @email.origId %>
+</p>
+
+<p>
+  <strong>Hash:</strong>
+  <%= @email.hash %>
+</p>
+
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to 'Back', emails_path %>
